@@ -10,6 +10,3 @@ class Wallet:
 
     def remove_balance(self, val):
         self.balance = self.balance - val
-
-    def trampa(self):
-        self.balance = self.balance + 1000
