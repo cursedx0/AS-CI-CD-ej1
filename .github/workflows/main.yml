@@ -1,0 +1,15 @@
+name: workflow-ej1
+
+on: push
+
+jobs:
+  onPush:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: bajar código
+        uses: actions/checkout@v4
+      - name: instalar pytest
+        run: pip install pytest
+      - name: testear
+        run: pytest test.py
