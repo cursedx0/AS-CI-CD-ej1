@@ -1,0 +1,19 @@
+name: main2
+
+on: pull_request
+
+jobs: 
+  j1:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+    
+    steps:
+      -
+        name: bajar codigo
+        uses: actions/checkout@v4
+      - name: correccion
+        uses: advanced-security/python-lint-code-scanning-action@v1
+        with:
+          linter: pylint
+    
