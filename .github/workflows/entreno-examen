@@ -1,0 +1,29 @@
+name: entreno-examen
+
+on:
+  push:
+    branches:
+    - nueva-caracteristica
+
+jobs:
+  uno:
+    runs-on: ubuntu-latest
+    steps:
+      - name: bajar-codigo
+        uses: actions/checkout@v4
+
+      - name: config-entorno
+        uses: actions/setup-python@v5
+
+      - name: exe1
+        run: pip install pytest
+
+      - name: exe2
+        run: pytest test.py
+
+      - name: docker
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          tags: cursedx0/examenAS:latest
