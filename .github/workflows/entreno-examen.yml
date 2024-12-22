@@ -26,4 +26,4 @@ jobs:
         with:
           context: .
           push: false
-          tags: cursedx0/examenAS:latest
+          tags: cursedx0/examen-as:latest
