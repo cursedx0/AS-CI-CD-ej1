@@ -10,3 +10,4 @@ class Wallet:
 
     def remove_balance(self, val):
         self.balance = self.balance - val
+#1
